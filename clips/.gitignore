@@ -18,10 +18,10 @@ yarn-error.log
 .c9/
 *.launch
 .settings/
-*.sublime-workspace
+.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
