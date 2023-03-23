@@ -1,4 +1,7 @@
-      <!-- Login Form -->
+     <app-alert *ngIf="showAlert" [color]="alertColor">
+      {{alertMsg}}
+     </app-alert>
+     <!-- Login Form -->
       
       <form #loginForm="ngForm"  (ngSubmit)="login()">
         <!-- Email -->
@@ -22,7 +25,7 @@
             placeholder="Password" />
             <p class ="text-red-400" *ngIf="password.invalid && password.touched && password.dirty"> Password is invalid</p>
         </div>
-        <button type="submit" [disabled]="loginForm.invalid"
+        <button type="submit" [disabled]="loginForm.invalid || inSubmission"
           class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500">
           Submit
         </button>
